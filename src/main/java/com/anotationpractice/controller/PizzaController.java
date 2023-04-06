@@ -9,7 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class PizzaController {
 
-    @Qualifier("vegPizza")
+    /*
+    @primary annotation is used to set the priority of a bean, to get injected
+    it may be alternative of @qualifier annotation
+    in this case, @primary annotation is used to class level to define the priority
+     */
+
     @Autowired
     private Pizza pizza;
 
