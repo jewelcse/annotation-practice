@@ -1,34 +1,19 @@
 package com.anotationpractice.controller;
 
-import com.anotationpractice.service.PizzaService;
+import com.anotationpractice.service.Pizza;
+import com.anotationpractice.service.VegPizza;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class PizzaController {
-    // field injection applied
+
+    @Qualifier("vegPizza")
     @Autowired
-    private PizzaService pizzaService;
-
-
-    // construct injection applied
-    //private PizzaService pizzaService;
-
-    //@Autowired
-    //public PizzaController(PizzaService service){
-    //    this.pizzaService = service;
-    //}
-
-
-    // setter injection applied
-    //private PizzaService pizzaService;
-
-    //@Autowired
-    //public void setVegPizza(PizzaService service){
-    //   this.pizzaService = service;
-    //}
+    private Pizza pizza;
 
     public String getPizza() {
-        return pizzaService.getVegPizza();
+        return pizza.getPizza();
     }
 }
