@@ -9,4 +9,14 @@ import org.springframework.stereotype.Component;
 
 public class PizzaController {
 
+    private Pizza pizza;
+
+    public PizzaController(Pizza pizza){
+        this.pizza = pizza;
+    }
+
+    public String getPizza(){
+        return pizza.getPizza();
+    }
+
 }

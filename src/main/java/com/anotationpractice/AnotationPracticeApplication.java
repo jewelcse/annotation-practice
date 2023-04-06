@@ -13,7 +13,7 @@ public class AnotationPracticeApplication {
     public static void main(String[] args) {
         var context = SpringApplication.run(AnotationPracticeApplication.class, args);
 
-        NonVegPizza controller = (NonVegPizza) context.getBean("myNonVegPizza");
+        PizzaController controller = (PizzaController) context.getBean("controller");
         System.out.println(controller.getPizza());
 
 
