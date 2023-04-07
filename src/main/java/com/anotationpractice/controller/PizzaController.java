@@ -1,10 +1,7 @@
 package com.anotationpractice.controller;
 
 import com.anotationpractice.service.Pizza;
-import com.anotationpractice.service.VegPizza;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+
 
 
 public class PizzaController {
@@ -19,4 +16,11 @@ public class PizzaController {
         return pizza.getPizza();
     }
 
+    private void init() {
+        System.out.println("Initialize the controller logic");
+    }
+
+    private void destroy() {
+        System.out.println("Destroy the controller logic");
+    }
 }
