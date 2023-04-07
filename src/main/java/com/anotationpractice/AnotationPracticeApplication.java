@@ -18,7 +18,7 @@ public class AnotationPracticeApplication {
 
         // on demand the bean is loaded and got the output
         // on the other hand, Eager Loader is loaded before while the application is bootstrapped
-        // @Lazy annotation is used with @Component, @Bean, @Configiration annotation
+        // @Lazy annotation is used with @Component, @Bean, @Configuration annotation
         LazyLoader loader = context.getBean(LazyLoader.class);
         System.out.println(loader.getMessage());
     }
