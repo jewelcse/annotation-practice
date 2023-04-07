@@ -26,7 +26,7 @@
 
 ![img.png](images/stereotype.png)
 
-![img.png](img.png)
+![img.png](images/stereotype-2.png)
 
 <h2>@Controller</h2>
 <h2>@Service</h2>
