@@ -2,6 +2,7 @@ package com.anotationpractice;
 
 import com.anotationpractice.controller.PizzaController;
 import com.anotationpractice.lazy.LazyLoader;
+import com.anotationpractice.propertySource.PropertySourceDemo;
 import com.anotationpractice.repository.MyRepository;
 import com.anotationpractice.scope.PrototypeBeanScope;
 import com.anotationpractice.scope.SingletonBeanScope;
@@ -19,13 +20,12 @@ public class AnotationPracticeApplication {
     public static void main(String[] args) {
         var context = SpringApplication.run(AnotationPracticeApplication.class, args);
 
-        // 3 ways to get the value
-        // 1. from @Value("our value")
-        // 2. from application.properties file
-        // 3. from the system variables
+        // @propertySource annotation is used to manage different properties file
+        // @Configuration is used with @propertySource
+        // @Value is used to get the values from property file
 
-        ValueAnnotationDemo valueAnnotationDemo = context.getBean(ValueAnnotationDemo.class);
-        System.out.println(valueAnnotationDemo.toString());
+        PropertySourceDemo propertySourceDemo = context.getBean(PropertySourceDemo.class);
+        System.out.println(propertySourceDemo.toString());
     }
 
 }
