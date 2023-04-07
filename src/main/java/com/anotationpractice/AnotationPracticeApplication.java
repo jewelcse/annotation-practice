@@ -3,6 +3,7 @@ package com.anotationpractice;
 import com.anotationpractice.controller.PizzaController;
 import com.anotationpractice.lazy.LazyLoader;
 import com.anotationpractice.propertySource.PropertySourceDemo;
+import com.anotationpractice.propertySource.PropertySourceDemo2;
 import com.anotationpractice.repository.MyRepository;
 import com.anotationpractice.scope.PrototypeBeanScope;
 import com.anotationpractice.scope.SingletonBeanScope;
@@ -26,6 +27,9 @@ public class AnotationPracticeApplication {
 
         PropertySourceDemo propertySourceDemo = context.getBean(PropertySourceDemo.class);
         System.out.println(propertySourceDemo.toString());
+
+        PropertySourceDemo2 demo2 = context.getBean(PropertySourceDemo2.class);
+        System.out.println(demo2.toString());
     }
 
 }
