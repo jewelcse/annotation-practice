@@ -1,6 +1,7 @@
 package com.anotationpractice;
 
 import com.anotationpractice.controller.PizzaController;
+import com.anotationpractice.lazy.LazyLoader;
 import com.anotationpractice.repository.MyRepository;
 import com.anotationpractice.service.MyService;
 import com.anotationpractice.service.NonVegPizza;
@@ -15,8 +16,11 @@ public class AnotationPracticeApplication {
     public static void main(String[] args) {
         var context = SpringApplication.run(AnotationPracticeApplication.class, args);
 
-        MyRepository controller = context.getBean(MyRepository.class);
-        System.out.println(controller.getRepository());
+        // on demand the bean is loaded and got the output
+        // on the other hand, Eager Loader is loaded before while the application is bootstrapped
+        // @Lazy annotation is used with @Component annotation
+        LazyLoader loader = context.getBean(LazyLoader.class);
+        System.out.println(loader.getMessage());
     }
 
 }

@@ -32,4 +32,8 @@
 <h2>@Service</h2>
 <h2>@Repository</h2>
 
+<h1>Lazy </h1>
+
+![img.png](images/lazy.png)
+
 
