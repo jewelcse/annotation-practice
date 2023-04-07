@@ -36,4 +36,10 @@
 
 ![img.png](images/lazy.png)
 
+<h1>Scope</h1>
+
+![img.png](images/socpe.png)
+
+![img.png](images/scope-2.png)
+
 
