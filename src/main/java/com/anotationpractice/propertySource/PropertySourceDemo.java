@@ -15,6 +15,9 @@ public class PropertySourceDemo {
     @Value("${gmail.password}")
     private String password;
 
+    @Value("${spring.database.username}")
+    private String dbusername;
+
     @Override
     public String toString() {
         return "PropertySourceDemo{" +
@@ -22,6 +25,7 @@ public class PropertySourceDemo {
                 ", port='" + port + '\'' +
                 ", user='" + user + '\'' +
                 ", password='" + password + '\'' +
+                ", dbusername='" + dbusername + '\'' +
                 '}';
     }
 }
