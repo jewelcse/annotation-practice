@@ -1,6 +1,7 @@
 package com.anotationpractice;
 
 import com.anotationpractice.controller.PizzaController;
+import com.anotationpractice.service.MyService;
 import com.anotationpractice.service.NonVegPizza;
 import com.anotationpractice.service.Pizza;
 import com.anotationpractice.service.VegPizza;
@@ -13,10 +14,8 @@ public class AnotationPracticeApplication {
     public static void main(String[] args) {
         var context = SpringApplication.run(AnotationPracticeApplication.class, args);
 
-        PizzaController controller = context.getBean(PizzaController.class);
-        System.out.println(controller.getPizza());
-
-
+        MyService controller = context.getBean(MyService.class);
+        System.out.println(controller.getService());
     }
 
 }
