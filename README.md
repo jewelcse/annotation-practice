@@ -26,10 +26,20 @@
 
 ![img.png](images/stereotype.png)
 
-![img.png](img.png)
+![img.png](images/stereotype-2.png)
 
 <h2>@Controller</h2>
 <h2>@Service</h2>
 <h2>@Repository</h2>
+
+<h1>Lazy </h1>
+
+![img.png](images/lazy.png)
+
+<h1>Scope</h1>
+
+![img.png](images/socpe.png)
+
+![img.png](images/scope-2.png)
 
 
