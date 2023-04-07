@@ -28,7 +28,8 @@
 
 ![img.png](img.png)
 
-
 <h2>@Controller</h2>
+<h2>@Service</h2>
+<h2>@Repository</h2>
 
 
