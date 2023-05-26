@@ -42,4 +42,8 @@
 
 ![img.png](images/scope-2.png)
 
+<h1>Value</h1>
+
+![img.png](images/value.png)
+
 
