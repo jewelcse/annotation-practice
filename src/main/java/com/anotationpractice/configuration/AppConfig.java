@@ -10,16 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    /*
-    Before we used the annotation based configuration, for creating bean using @component annotation
-    Now, we are creating the java base configuration, in this case, we will create some methods which
-    will produce the beans, methods tells spring ioc the bean definitions
-     */
 
-    @Bean
-    public Pizza vegPizza(){
-        return new VegPizza();
-    }
+
 
     @Bean(name = "myNonVegPizza")
     public Pizza nonVegPizza(){
@@ -44,4 +36,6 @@ public class AppConfig {
     public PizzaController controller(){
         return new PizzaController(nonVegPizza());
     }
+
 }
+
