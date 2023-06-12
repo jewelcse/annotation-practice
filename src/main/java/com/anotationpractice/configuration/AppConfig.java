@@ -9,7 +9,9 @@ public class AppConfig {
 
     @Bean
     public VegPizza vegPizza(){
+
         return new VegPizza();
+
     }
 
 }
