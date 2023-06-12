@@ -1,4 +1,4 @@
-package com.anotationpractice.service;
+package com.anotationpractice.component;
 
 import org.springframework.stereotype.Component;
 

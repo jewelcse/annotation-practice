@@ -1,14 +1,19 @@
 package com.anotationpractice;
 
-import com.anotationpractice.service.PizzaService;
+import com.anotationpractice.component.PizzaService;
+import com.anotationpractice.manual.ManualVegPizza;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class AnotationPracticeApplication {
 
     public static void main(String[] args) {
+
+
+        // manual way to get the object of ManualVegPizza Class
+        ManualVegPizza vegPizza = new ManualVegPizza();
+        System.out.println(vegPizza.getManualVegPizza());
 
         var context = SpringApplication.run(AnotationPracticeApplication.class, args);
         // Using the direct class name, we can get the bean
@@ -28,6 +33,8 @@ public class AnotationPracticeApplication {
         // and need to typecast the class
         //PizzaService pizzaService2 = (PizzaService) context.getBean("mypizza");
         //System.out.println(pizzaService2.getVegPizza());
+
+
     }
 
 }
