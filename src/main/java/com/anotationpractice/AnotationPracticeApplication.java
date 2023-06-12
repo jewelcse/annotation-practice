@@ -15,6 +15,7 @@ public class AnotationPracticeApplication {
 
         PizzaController controller = context.getBean(PizzaController.class);
         System.out.println(controller.getPizza());
+
     }
 
 }
