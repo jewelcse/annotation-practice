@@ -15,11 +15,13 @@ public class AnotationPracticeApplication {
         ManualVegPizza vegPizza = new ManualVegPizza();
         System.out.println(vegPizza.getManualVegPizza());
 
+
         var context = SpringApplication.run(AnotationPracticeApplication.class, args);
         // there are 3 ways to get the beans from application context
         // Using the direct class name, we can get the bean
         PizzaService pizzaService0 = context.getBean(PizzaService.class);
         System.out.println(pizzaService0.getVegPizza());
+
 
         // class name can also be treated as a bean name if and only if the first letter of
         // the class is small letter, and we will get
@@ -32,6 +34,7 @@ public class AnotationPracticeApplication {
         // and need to typecast the class
         //PizzaService pizzaService2 = (PizzaService) context.getBean("mypizza");
         //System.out.println(pizzaService2.getVegPizza());
+
 
 
     }
