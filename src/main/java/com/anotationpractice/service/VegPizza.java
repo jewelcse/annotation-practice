@@ -2,6 +2,7 @@ package com.anotationpractice.service;
 
 import org.springframework.stereotype.Component;
 
+//@Component("vegPizza")
 @Component
 public class VegPizza implements Pizza{
 
