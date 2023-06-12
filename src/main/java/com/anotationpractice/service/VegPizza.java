@@ -2,9 +2,9 @@ package com.anotationpractice.service;
 
 import org.springframework.stereotype.Component;
 
-public class VegPizza implements Pizza{
+public class VegPizza{
 
-    @Override
+
     public String getPizza() {
         return "Veg Pizza";
     }
