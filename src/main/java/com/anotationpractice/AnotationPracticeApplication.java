@@ -1,14 +1,5 @@
 package com.anotationpractice;
 
-import com.anotationpractice.controller.PizzaController;
-import com.anotationpractice.lazy.LazyLoader;
-import com.anotationpractice.repository.MyRepository;
-import com.anotationpractice.scope.PrototypeBeanScope;
-import com.anotationpractice.scope.SingletonBeanScope;
-import com.anotationpractice.service.MyService;
-import com.anotationpractice.service.NonVegPizza;
-import com.anotationpractice.service.Pizza;
-import com.anotationpractice.service.VegPizza;
 import com.anotationpractice.value.ValueAnnotationDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AnotationPracticeApplication {
 
     public static void main(String[] args) {
+        // get the application context
         var context = SpringApplication.run(AnotationPracticeApplication.class, args);
 
         // 3 ways to get the value
