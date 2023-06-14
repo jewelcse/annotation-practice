@@ -4,8 +4,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
-@Primary
+@Service("VegPizza")
+//@Primary
 public class VegPizza implements Pizza{
 
     @Override
