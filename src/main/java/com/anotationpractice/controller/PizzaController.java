@@ -3,8 +3,6 @@ package com.anotationpractice.controller;
 import com.anotationpractice.dto.Data;
 import com.anotationpractice.service.Pizza;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 // @Controller annotation is used like @Component for creating the bean of the class.
