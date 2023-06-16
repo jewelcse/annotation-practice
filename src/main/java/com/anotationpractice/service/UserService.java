@@ -18,7 +18,7 @@ public class UserService {
     }
 
     public User getUserById(Long id) {
-        return userRepository.findById(id);
+        return userRepository.findById(id).get();
     }
 
     public User createUser(User user) {
@@ -26,11 +26,11 @@ public class UserService {
     }
 
     public User updateUser(User user) {
-        return userRepository.update(user);
+        return userRepository.save(user);
     }
 
     public void deleteUser(Long id) {
-        userRepository.delete(id);
+        userRepository.deleteById(id);
     }
 
 }
