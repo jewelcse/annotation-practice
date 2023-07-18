@@ -1,10 +1,11 @@
 package com.anotationpractice.dto;
 
 public class UserCreateRequest {
-
     private String name;
     private String email;
+
     private String address;
+
     private String city;
 
     public UserCreateRequest(String name, String email, String address, String city) {
@@ -12,6 +13,9 @@ public class UserCreateRequest {
         this.email = email;
         this.address = address;
         this.city = city;
+    }
+
+    public UserCreateRequest() {
     }
 
     public String getName() {

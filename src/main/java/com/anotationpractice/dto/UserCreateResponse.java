@@ -1,10 +1,11 @@
 package com.anotationpractice.dto;
 
 public class UserCreateResponse {
-
     private String name;
     private String email;
+
     private String address;
+
     private String city;
 
     public UserCreateResponse(String name, String email, String address, String city) {
@@ -12,6 +13,9 @@ public class UserCreateResponse {
         this.email = email;
         this.address = address;
         this.city = city;
+    }
+
+    public UserCreateResponse() {
     }
 
     public String getName() {
