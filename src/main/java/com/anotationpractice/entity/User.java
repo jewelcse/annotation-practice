@@ -6,18 +6,18 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    // user object => DB row
+
+    @Id // primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increment
+    private long id;
     private String name;
     private String email;
 
-    @OneToOne
-    @JoinColumn(name = "profile_id",referencedColumnName = "id")
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id")
     private Profile profile;
 
-    @ManyToOne
-    private Department department;
 
     public User() {
     }
@@ -29,12 +29,11 @@ public class User {
     }
 
 
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -54,19 +53,12 @@ public class User {
         this.email = email;
     }
 
+
     public Profile getProfile() {
         return profile;
     }
 
     public void setProfile(Profile profile) {
         this.profile = profile;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 }
