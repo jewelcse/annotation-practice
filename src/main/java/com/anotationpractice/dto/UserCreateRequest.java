@@ -8,11 +8,21 @@ public class UserCreateRequest {
 
     private String city;
 
+    private long deptId;
+
     public UserCreateRequest(String name, String email, String address, String city) {
         this.name = name;
         this.email = email;
         this.address = address;
         this.city = city;
+    }
+
+    public UserCreateRequest(String name, String email, String address, String city, long deptId) {
+        this.name = name;
+        this.email = email;
+        this.address = address;
+        this.city = city;
+        this.deptId = deptId;
     }
 
     public UserCreateRequest() {
@@ -48,5 +58,13 @@ public class UserCreateRequest {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public long getDeptId() {
+        return deptId;
+    }
+
+    public void setDeptId(long deptId) {
+        this.deptId = deptId;
     }
 }

@@ -2,8 +2,10 @@ package com.anotationpractice.serviceImpl;
 
 import com.anotationpractice.dto.UserCreateRequest;
 import com.anotationpractice.dto.UserCreateResponse;
+import com.anotationpractice.entity.Department;
 import com.anotationpractice.entity.Profile;
 import com.anotationpractice.entity.User;
+import com.anotationpractice.repository.DepartmentRepository;
 import com.anotationpractice.repository.ProfileRepository;
 import com.anotationpractice.repository.UserRepository;
 import com.anotationpractice.service.UserService;
@@ -22,6 +24,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private ProfileRepository profileRepository;
 
+    @Autowired
+    private DepartmentRepository departmentRepository;
+
     @Override
     public UserCreateResponse save(UserCreateRequest request) {
 
@@ -36,6 +41,15 @@ public class UserServiceImpl implements UserService {
         profileRepository.save(profile);
 
         user.setProfile(profile);
+
+        // todo:
+
+        Optional<Department> department = departmentRepository.findById(request.getDeptId());
+        if (department.isEmpty()){
+            throw new RuntimeException("department not found for id: "  +request.getDeptId());
+        }
+
+        user.setDepartment(department.get());
 
         userRepository.save(user);
 
